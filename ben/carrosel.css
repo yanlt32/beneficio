@@ -1,0 +1,51 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Largura responsiva */
+    max-height: calc(100% - 40px); /* Altura responsiva com espaço para o título */
+    margin-top: 20px; /* Ajuste para abaixar a imagem */
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
+
+/* Media query para ajustar em telas menores */
+@media (max-width: 768px) {
+    .carousel-item img {
+        margin-top: 10px; /* Ajuste menor para abaixar a imagem */
+    }
+}

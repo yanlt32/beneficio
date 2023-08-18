@@ -1,0 +1,42 @@
+body {
+    margin: 10px;
+    background-color: #f5f5f5;
+}
+
+.content1 {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Alterado para relative para melhorar o posicionamento */
+    margin: 0 auto; /* Centralizar horizontalmente */
+}
+
+.truncate {
+    overflow: hidden;
+    max-height: 200px;
+}
+
+.hidden-content {
+    display: none;
+    margin-top: 20px;
+}
+
+.read-more-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Adicionando media query para dispositivos com largura até 768px */
+@media (max-width: 768px) {
+    .content1 {
+        max-width: 100%; /* O conteúdo ocupará a largura completa */
+        left: auto; /* Remover posicionamento absoluto */
+        margin: 0 10px; /* Adicionar margens para melhorar o espaçamento */
+    }
+}
