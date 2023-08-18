@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ex.css">
+    <title>Explorando</title>
+</head>
+
+<body>
+
+    <body>
+        <header class="header">
+
+            <div class="content">
+
+                <a href="#" target="_blank" class="logo"><img src="img/logo.png" title="Loop Nerd"></a>
+
+                <input class="mobile-btn" type="checkbox" id="mobile-btn" />
+                <label class="mobile-icon" for="mobile-btn"><span class="hamburguer"></span></label>
+
+                <ul class="nav">
+
+                    <li><a href="#" title="Home">Home</a></li>
+                    <li><a href="#" title="Sobre">Sobre</a></li>
+                    <li><a href="#" title="Artigos">Tecnologias</a></li>
+                    <li><a href="#" title="Contato">Vantagens</a></li>
+                    <li><a href="#" title="Contato">Notícias</a></li>
+                    <li class="login"><a href="#" id="login-link">Login</a></li>
+
+                </ul>
+
+            </div>
+            <div id="login-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Login</h2>
+                    <form>
+                        <img class="Imagem" src="img/Vector.svg">
+                        <label for="username">username:</label>
+                        <input type="text" id="username" name="Username">
+                        <label for="password">password:</label>
+                        <input type="password" id="password" name="Password">
+                        <button type="submit">Entrar</button>
+                    </form>
+                    <p>Não tem uma conta? <a href="#">Crie uma aqui</a></p>
+                </div>
+            </div>
+            <div id="mensagem"></div>
+
+            <script>
+                const loginBtn = document.getElementById("login-link");
+                const modal = document.getElementById("login-modal");
+                loginBtn.onclick = function () {
+                    modal.style.display = "flex";
+                }
+                const closeBtn = document.getElementsByClassName("close")[0];
+                closeBtn.onclick = function () {
+                    modal.style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+
+        </header>
+        <main>
+            <div class="banner"><img src="img/Energia Renovável (1).jpg" alt=""></div>
+            <div class="textben">
+                <h1>Explorando Tecnologias de</h1>
+            </div>
+            <div class="textben2">
+                <h1>Energia Renovável </h1>
+            </div>
+            <div class="pf">
+                <p>Nossa jornada pelo mundo da energia renovável nos leva a explorar uma variedade de tecnologias
+                    inovadoras que estão moldando o futuro sustentável. Cada uma dessas tecnologias oferece uma maneira
+                    única de aproveitar os recursos naturais ao nosso redor para gerar energia limpa e reduzir nosso
+                    impacto ambiental.</p>
+            </div>
+            <div class="colum">
+             <div class="image-container1">
+        <img src="img/3f5027dc5bbeb37037514b630af6239b.jfif" alt="Imagem 1">
+    </div>
+    <div class="image-container2">
+        <img src="img/vent.jfif" alt="Imagem 2">
+    </div>
+    <div class="image-container3">
+        <img src="img/85b5c5e08f85742bef67b68c6d58969d.jfif" alt="Imagem 3">
+    </div>
+    </div>
+    <div class=" colum1">
+    <div class="image-container4">
+        <img src="img/ad79a342756ef9a13e4264eea9cd886c.jfif" alt="Imagem 4">
+    </div>
+    <div class="image-container5">
+        <img src="img/49b67f735ae17a09287da432302a81ec.jfif" alt="Imagem 5">
+    </div>
+</div>
+    <div class="modal1">
+        <span class="close-button1">&times;</span>
+        <img class="modal-content1" src="" alt="Imagem Ampliada">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const imageContainers = document.querySelectorAll(".image-container1, .image-container2, .image-container3, .image-container4, .image-container5");
+            const modal = document.querySelector(".modal1");
+            const modalContent = document.querySelector(".modal-content1");
+            const closeBtn = document.querySelector(".close-button1");
+
+            imageContainers.forEach(container => {
+                container.addEventListener("click", function() {
+                    modal.style.display = "flex";
+                    modalContent.src = container.querySelector("img").src;
+                });
+            });
+
+            closeBtn.addEventListener("click", function() {
+                modal.style.display = "none";
+            });
+
+            window.addEventListener("click", function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        });
+    </script>
+        </main>
+        <div class="texth1"> <h1 class="sol">Energia Solar</h1><p>A energia solar é capturada diretamente do sol através de painéis fotovoltaicos que convertem a luz solar em eletricidade. Essa tecnologia é amplamente adotada em telhados residenciais, empresas e usinas solares em larga escala.</p></div>
+        
+    </body>
+
+</html>
